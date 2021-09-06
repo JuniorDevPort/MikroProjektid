@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+   <head> 
+          
+       <!--asdasdasd asdasdasd CSS property to place div
+            side by side 
+			
+			How to create popup alert html , a model? 
+			 
+			 maybe take the HTML DOM textContent Property and if text length is over some length restrict it.
+			 maybe hide the text and maybe show it my setAttribute or createAttribute or removeAttribute onclick event attribute
+			 
+			 (https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/hidden)
+			 
+			 (https://www.javascripttutorial.net/javascript-dom/javascript-removechild/)
+			
+			
+			
+			-->
+        <style> 
+            #leftbox {
+                float:left; 
+                background:Red;
+                width:25%;
+                height:280px;
+            }
+            #middlebox{
+                float:left; 
+                background:Green;
+                width:50%;
+                height:280px;
+            }
+            #rightbox{
+                float:right;
+                background:blue;
+                width:25%;
+                height:280px;
+            }
+            h1{
+                color:green;
+                text-align:center;
+            }
+        </style> 
+    </head> 
+<body>
+<br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+   
+<form>
+
+  <label for="fname">Expense</label>
+  <input type="text" id="expense" name="fname" value="...">
+  
+  </form>
+  
+  <p><button onclick="myFunctionAdd()">Submit expense</button></p>
+ <!--   
+  <label for="lname">Reason for expense</label>
+  <input type="text" id="fname" name="fname" value="...">
+  
+  <br>
+   <br>
+  
+  <label for="lname">Date</label>
+  <input type="text" id="lname" name="lname" value="...">
+
+</form>
+--->
+
+<script>
+function myFunctionAdd() {
+
+	var node = document.createElement("LI");
+	var textnode = document.createTextNode(document.getElementById("expense").value);
+	node.appendChild(textnode);
+  
+	var btn = document.createElement("BUTTON");
+	btn.innerHTML = "CLICK ME TO DELETE";
+	btn.setAttribute("onclick", "myFunctionDelete()");
+	node.appendChild(btn);
+  
+  
+  document.getElementById("oList").appendChild(node);
+
+}
+
+function myFunctionDelete() {
+
+	var list = document.getElementById("oList");
+  	list.removeChild(list.childNodes[0]);
+	console.log(list);
+	
+	}
+
+</script>
+	
+	
+
+<ol id = "oList"><li>Coffee</li><li>Tea</li><li>Milk</li></ol> 	
+
+
+</body>
+</html>
+
+<!--  
+
+<script>
+function myFunctionDelete() {
+
+	var list = document.getElementById("myList");
+  
+  list = list.removeChild(list.childNodes[0]);
+  console.log(document.getElementById("myList"));
+  
+----------}
+Siin on kopeeritud variant mis tootas netis
+
+
+------------
+<script>
+function myFunctionAdd() {
+
+  var node = document.createElement("LI");
+  var btn = document.createElement("BUTTON");
+  var nodeArrayLength = document.getElementById("myList").length;
+  
+  
+  
+  
+  btn.innerHTML = "CLICK ME TO DELETE";
+  btn.setAttribute("onclick", "myFunctionDelete()");
+ 
+  
+  node.appendChild(btn);
+  document.getElementById("myList").appendChild(node);
+
+}
+</script>
+
+</script>
+
+-->
