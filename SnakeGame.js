@@ -15,22 +15,22 @@ function draw() {
 }
 
 function keyPressed() {
-    if (keycode === UP_ARROW){
+    if (keyCode === UP_ARROW){
         s.dir(0, -1);
-    }else if (keycode === DOWN_ARROW){
-            s.dir(0, -);
 
+    }else if (keyCode === DOWN_ARROW){
+            s.dir(0, 1);
     }
-    else if (keycode === RIGHT_ARROW){
+    else if (keyCode === RIGHT_ARROW){
         s.dir(1, 0);
 
-    }else if (keycode === LEFT_ARROW){
-    s.dir(-1, 0);
+    }else if (keyCode === LEFT_ARROW){
+        s.dir(-1, 0);
 
+    \\see on comment
 }
 
  }
 
 
 
-}
