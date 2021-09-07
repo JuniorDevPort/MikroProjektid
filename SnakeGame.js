@@ -12,6 +12,9 @@ function draw() {
 	background(51); 
 	s.update();
     s.show(); 
+
+    //fill(255,0, 100);
+    //rect(food.x, food.y, scl, scl)
 }
 
 function keyPressed() {
@@ -27,7 +30,7 @@ function keyPressed() {
     }else if (keyCode === LEFT_ARROW){
         s.dir(-1, 0);
 
-    \\see on comment
+    
 }
 
  }
