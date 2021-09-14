@@ -1,9 +1,10 @@
 
 var m = 3;
 var n = 1;
-var o = 0;
+//var o = 0;
 var list1 = [];
-var list2 = [];
+//var list2 = [];
+
 
 for(i=1; i <= m; i +=1){
     
@@ -13,48 +14,61 @@ for(i=1; i <= m; i +=1){
 
 }
 console.log(list1);
-//i use two assertions so i can visually see that they are okay, the first does not print and the second prints true, with message
-console.assert(list1.length === m);
-console.assert(false, list1.length === m, "condition is OKAY");
-
-list2 = list1;
 
 var IndexOfTableArray = list1[0];
+
+
+
+//////////////////////////////////////////////////////////////////
+//i use two assertionsStyle, so i can visually see that they are okay, the first does not print and the second prints true, with message
+
+
+console.assert(list1.length === m);
+console.assert(false, list1.length === m, "condition is OKAY");
 
 console.assert(typeof IndexOfTableArray === "number");
 console.assert(false, typeof IndexOfTableArray === "number", "condition is OKAY" );
 
-var n = 1;
-
 function TestListElementsAgainstIndex(){
     let o = 0; 
-    
+    let p = 0
+
     for(i=1; i <= m; i +=1){
         
-        console.log(m,n, IndexOfTableArray, o);    
+        //console.log(m,n, IndexOfTableArray, o);    
         console.log(list1[o] * IndexOfTableArray, (1 * o + 1));
 
         console.assert((list1[o] * IndexOfTableArray) === (1 * o + 1));
         console.assert(false, list1[o] * IndexOfTableArray === 1 * o + 1, "condition is OKAY");
     
-        IndexOfTableArray++;
-        o++;
+        o+=1;
     
  }
+ IndexOfTableArray++;
 }
+//////////////////////////////////////////////////////////////////
 
-
-// - n : is the number you add in every iteration, so it scales according to the logic of the table
-//       if the number
 
 TestListElementsAgainstIndex();
 
 
-
-for( i=1; i === list1.length; i +=1) {
-    
+for(i=1; i <= list1.length; i +=1){
+    console.log(list1);
+    console.log(list1[o] * IndexOfTableArray)
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 
 3 testi:
