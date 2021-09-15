@@ -1,22 +1,32 @@
 
 var m = 3;
 var n = 1;
+
 var o = 0;
 var IndexOfTableArray = 0;
 
 var list1 = [];
 var list2 = [];
+var list3 = [];
 
 ///////////////////////////////////SECTION I////////////////////////////////
+
 for(i=1; i <= m; i +=1){
     
-    list1.push(n);
-    n++;
+        list1.push(n);
+        list2.push(n);
+        list3.push(n);
+        n++;
     
 
-}
-//console.log(list1);
-list2 = list1;
+    }
+    
+   
+
+
+
+console.log(list1);
+
 
 
 ///////////////////////////////////SECTION I////////////////////////////////
@@ -29,17 +39,18 @@ for(j=1; j <= list1.length; j +=1){
     IndexOfTableArray +=1;
         
         for(i=1; i <= list1.length; i +=1){
-           // list1[o] = list1[o] * IndexOfTableArray
+            list1[o] = list1[o] * IndexOfTableArray
 
             console.log("this is list1", list1, "this is IndexOfTab..",IndexOfTableArray, "This is o", o);
-            console.log("Multiplying...",list1[o] * IndexOfTableArray)
+
+            console.log("Multiplying...",list1[o]);//* IndexOfTableArray)
 
             TestListElementsAgainstIndex();
             
             o +=1;
  
         }
-
+        
     o = 0;
 
     console.log("this is list1", list1, "this is IndexOfTab..", IndexOfTableArray);
@@ -73,16 +84,17 @@ console.log("loop valine", o);
 function TestListElementsAgainstIndex(){
     //let o = 0; 
     //let p = 0
+       
 
    // for(i=1; i <= m; i +=1){
-        console.log("sisene O", o, list1, IndexOfTableArray);
+        console.log("sisene O", o, list1,list2,list3,  IndexOfTableArray);
         //console.log(m,n, IndexOfTableArray, o);    
-        console.log("Kontroll Multiplying...",list1[o] * IndexOfTableArray, "see on kontroll tehe", (1 * o + 1)*IndexOfTableArray);
+        console.log("Kontroll Multiplying...kohal O %d",list1[o], list1[o] , "see on kontroll tehe", (1 * o + 1)*IndexOfTableArray);
         console.log(list1[o] * IndexOfTableArray, (1 * o + 1)*IndexOfTableArray);
 
 
-        console.assert((list1[o] * IndexOfTableArray) === (1 * o + 1)*IndexOfTableArray);
-        console.assert(false, list1[o] * IndexOfTableArray === (1 * o + 1)*IndexOfTableArray);
+        console.assert((list1[o] ) === (1 * o + 1)*IndexOfTableArray);
+        console.assert(false, list1[o] === (1 * o + 1)*IndexOfTableArray);
     
         //o+=1;
     
