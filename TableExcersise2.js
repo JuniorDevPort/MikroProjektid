@@ -2,6 +2,8 @@
 var m = 3;
 var n = 1;
 var o = 0;
+var IndexOfTableArray = 0;
+
 var list1 = [];
 //var list2 = [];
 
@@ -15,7 +17,7 @@ for(i=1; i <= m; i +=1){
 }
 //console.log(list1);
 
-var IndexOfTableArray = list1[0];
+
 
 ///////////////////////////////////SECTION I////////////////////////////////
 
@@ -23,14 +25,25 @@ var IndexOfTableArray = list1[0];
 
 
 ///////////////////////////////////SECTION II////////////////////////////////
+for(j=1; j <= list1.length; j +=1){
+    IndexOfTableArray +=1;
+        for(i=1; i <= list1.length; i +=1){
+            console.log(list1, IndexOfTableArray, o);
+            console.log(list1[o] * IndexOfTableArray)
 
+            o +=1;
+            
 
-for(i=1; i <= list1.length; i +=1){
-    console.log(list1);
-    console.log(list1[o] * IndexOfTableArray)
+        }
+o = 0;
+
+console.log(list1, IndexOfTableArray);
 
 }
 
+
+console.assert(o <= m);
+console.assert(false, o <= m);
 
 ///////////////////////////////////SECTION II////////////////////////////////
 
@@ -50,6 +63,7 @@ console.assert(false, list1.length === m, "condition is OKAY");
 
 console.assert(typeof IndexOfTableArray === "number");
 console.assert(false, typeof IndexOfTableArray === "number", "condition is OKAY" );
+console.log(o);
 
 function TestListElementsAgainstIndex(){
     let o = 0; 
@@ -61,7 +75,7 @@ function TestListElementsAgainstIndex(){
         console.log(list1[o] * IndexOfTableArray, (1 * o + 1));
 
         console.assert((list1[o] * IndexOfTableArray) === (1 * o + 1));
-        console.assert(false, list1[o] * IndexOfTableArray === 1 * o + 1, "condition is OKAY");
+        console.assert(false, list1[o] * IndexOfTableArray === 1 * o + 1);
     
         o+=1;
     
