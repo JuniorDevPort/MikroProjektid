@@ -1,11 +1,11 @@
 
 var m = 3;
 var n = 1;
-//var o = 0;
+var o = 0;
 var list1 = [];
 //var list2 = [];
 
-
+///////////////////////////////////SECTION I////////////////////////////////
 for(i=1; i <= m; i +=1){
     
     list1.push(n);
@@ -13,13 +13,35 @@ for(i=1; i <= m; i +=1){
     
 
 }
-console.log(list1);
+//console.log(list1);
 
 var IndexOfTableArray = list1[0];
 
+///////////////////////////////////SECTION I////////////////////////////////
 
 
-//////////////////////////////////////////////////////////////////
+
+
+///////////////////////////////////SECTION II////////////////////////////////
+
+
+for(i=1; i <= list1.length; i +=1){
+    console.log(list1);
+    console.log(list1[o] * IndexOfTableArray)
+
+}
+
+
+///////////////////////////////////SECTION II////////////////////////////////
+
+
+
+//////////////////////////////////SECTION III////////////////////////////////
+
+
+
+
+
 //i use two assertionsStyle, so i can visually see that they are okay, the first does not print and the second prints true, with message
 
 
@@ -46,48 +68,6 @@ function TestListElementsAgainstIndex(){
  }
  IndexOfTableArray++;
 }
-//////////////////////////////////////////////////////////////////
-
 
 TestListElementsAgainstIndex();
-
-
-for(i=1; i <= list1.length; i +=1){
-    console.log(list1);
-    console.log(list1[o] * IndexOfTableArray)
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-3 testi:
-
-
-assert array numbers are the result of multiplying the array element with the index
-
-assert it is a type of array
-
-*/
-/* 
-assert that the table elemnts are the result of multiplying the list by the indexedDB.
-
-for loop : loop through the list and multiply by index : assert that each elemtn is the result of multiplying the array elemetn with the index
-
-for(i = 1; i <= array.length; i+=1)
-
-first i have the array  :  now take the first value of the array and put it into an index.an
-
-var IndexOfTableArray = list1[0];
-
-*/
+///////////////////////////////////SECTION III////////////////////////////////
