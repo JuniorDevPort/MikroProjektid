@@ -3,7 +3,8 @@ var m = 3;
 var n = 1;
 
 var o = 0;
-var IndexOfTableArray = 0;
+var IndexOfTableArray = 1;
+var IndexOfTableArray2 = 1;
 
 var list1 = [];
 var list2 = [];
@@ -14,8 +15,6 @@ var list3 = [];
 for(i=1; i <= m; i +=1){
     
         list1.push(n);
-        list2.push(n);
-        list3.push(n);
         n++;
     
 
@@ -36,10 +35,10 @@ console.log(list1);
 
 ///////////////////////////////////SECTION II////////////////////////////////
 for(j=1; j <= list1.length; j +=1){
-    IndexOfTableArray +=1;
+    
         
         for(i=1; i <= list1.length; i +=1){
-            list1[o] = list1[o] * IndexOfTableArray
+            list1[o] = list1[o] + IndexOfTableArray*2
 
             console.log("this is list1", list1, "this is IndexOfTab..",IndexOfTableArray, "This is o", o);
 
@@ -50,7 +49,7 @@ for(j=1; j <= list1.length; j +=1){
             o +=1;
  
         }
-        
+        IndexOfTableArray +=1;
     o = 0;
 
     console.log("this is list1", list1, "this is IndexOfTab..", IndexOfTableArray);
@@ -93,7 +92,7 @@ function TestListElementsAgainstIndex(){
         console.log(list1[o] * IndexOfTableArray, (1 * o + 1)*IndexOfTableArray);
 
 
-        console.assert((list1[o] ) === (1 * o + 1)*IndexOfTableArray);
+        console.assert((list1[o] ) === (1 * o + 1) * IndexOfTableArray);
         console.assert(false, list1[o] === (1 * o + 1)*IndexOfTableArray);
     
         //o+=1;
