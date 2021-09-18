@@ -19,6 +19,7 @@ for(i=1; i<=m; i+= 1){
 
 }
 
+
 console.log(0, list2);
 
 
@@ -40,7 +41,4 @@ console.log(n, list1);
 Index1 = 0;
 n++;
 }
-
-
-
 
