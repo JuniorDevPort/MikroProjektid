@@ -16,7 +16,7 @@ Question: What state are the doors in after the last pass? Which are open, which
 
 var a = 0;
  
-a=1;
+
 
 //kui uks on kinni, siis teed ta lahti, kui on lahtin siis teed kinni, 100 korda
 /*
@@ -24,7 +24,13 @@ a=1;
 if door=0 then door=1, if door=1 then door=0
 
 */
-if(a=0){
-  a=1
+for(let i=0; i<101; i++){
+  console.log("a=",a);
+  console.log("i=",i);
+  if(a==0){
+    a=1;
+  } else if(a==1) {
+    a=0;
+  }
 }
-console.log(a);
+
