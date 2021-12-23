@@ -15,7 +15,7 @@ Question: What state are the doors in after the last pass? Which are open, which
 */
 
 var a = 0;
-
+ 
 a=1;
 
 //kui uks on kinni, siis teed ta lahti, kui on lahtin siis teed kinni, 100 korda
