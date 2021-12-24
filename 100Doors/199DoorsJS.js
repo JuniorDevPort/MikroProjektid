@@ -5,100 +5,60 @@ The second time you only visit every 2nd door (door #2, #4, #6, ...).
 The third time, every 3rd door (door #3, #6, #9, ...), etc, until you only visit the 100th door.
 
 Question: What state are the doors in after the last pass? Which are open, which are closed?
-
-[Source http://rosettacode.org]
-
-//kas 100 doori peaks olema sada kohahoidjat arrys?
-//alustame 1 dor, mida avan ja sulgen
-//door on boolean v''rtuss
-
 */
-
-
- 
-
-
-//kui uks on kinni, siis teed ta lahti, kui on lahtin siis teed kinni, 100 korda
-/*
-
-if door=0 then door=1, if door=1 then door=0
-
-*/
-
-/* 
-for(let i=0; i<101; i++){
-  //konsool loogi
-  //console.log("a=",a);
-  // console.log("i=",i);//
   
-}
 
-*/
-
-//  nyyd ma pean lahendama k[SVGAnimatedNumberList, kuidas saada 100 ust?
-//   mul on 1 uks, aga on vaja luua 100 Tk.
-//   Kuidas luua sada tykki midagi?
-//   ka loopiga, et automatiseerida.
-
-  //pseudo: for loop 100 times and create a new element  
-  //see element 
-
-  //loon for loopi array jaoks
-  //siin loon 100 kohaga array. dynaamiline array elements vb ka voimalus?
-  var array = new Array(4);
+//esialgne array
+var array = new Array(10);
  
-//kui ma annan koigile 0 vaartuse ja hakkan sellega mangima?
-//if tingimustes hakkan mangima?
 
-  for(let i=0; i< 4; i++){
-    array[i] = 0;
+
+  for(let allzeros=0; allzeros< array.length; allzeros++){
+    array[allzeros] = 0;
     
   }
 
-  console.log(array);
+  //console.log(array);
 
-  //siin pean andma i++ suurema sammu, muutujaga?
-  //const a = 1;
-  var a = 0;
-  var b = 1
+  //now set up a for loop that changes every second element.
 
-  //change every second element in array
+  //for loop has a iterator and i use the iterator to increase the indexed elemnt by 2
 
+  //for(m = 0; m < 1;){
+  for(var m = 1; m < 3;){
 
-for(i=1; i<4; i++){//(2 times per 4 array)
-  array[b] = 2;
-  b = b + 1;
-  console.log("b",b);
-}
+    console.log("M", m);
 
-console.log(array);
-
-
-
-
-
-
-
-
-
-  
-  // for(let j=0; j<2; j++){
-    
-    
-  //   for(let i=0; i< 4; i++){
+    for(let k = 0; k < array.length;){
       
-  //     if(array[a]==0){
-  //       array[a] = 1;
-  //      } else if(array[a]==1){
-  //       array[a] = 3;
-  //       console.log("a", a)
-  //     }
+      if(array[k]==0){
 
-  //     a++;
-  //   }
-    
-  // }
-  //   console.log(array);
+        array[k] = 1;
+//kas siin pole ohtu, et ta hakkab valesid arve ümber muutma? noh kui index loogika ei eksi, siis see on okei.
+      } else if(array[k]==1){
+        array[k] = 0;
+      }
+      
+
+      
+
+      k = k + m;
+      console.log(array);
+      
+
+    }
+    var name = window. prompt("Enter your name: ");
+    m++
+  }
+  
+
+
+
+
+
+
+
+
 
     
   
