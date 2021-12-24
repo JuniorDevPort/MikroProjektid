@@ -32,31 +32,26 @@ var array = new Array(100);
     for(let k = 0; k < array.length;){
       
       if(array[k]==0){
-
         array[k] = 1;
-//kas siin pole ohtu, et ta hakkab valesid arve ümber muutma? noh kui index loogika ei eksi, siis see on okei.
-//probleem on, et K läheb nulli, ma pean säilitama selle väärtuse. vb siia väljaspoolt tuua üks muutuja?
-//kontroll on, et see peab progresseeruma 1-1-1, 2-4-6,3-6-9 jne...
+
+      } else if(array[k]==1){
+        array[k] = 0;
+
       }
-      //  else if(array[k]==1){
-      //   array[k] = 0;
-      // }
       
-
-      
-
       k= k + m;
       
-      console.log("K=", k);
-      //console.log("array length",array.length);
+      //console.log("K=", k);
+      console.log(array);
+    
 
-    }
-    // console.log("M", m);
-    m++
-    var name = window. prompt("Enter your name: ");
+    
     
     
   }
+  m++
+    var name = window. prompt("Enter your name: ");
+}
   
 
 
