@@ -9,7 +9,7 @@ Question: What state are the doors in after the last pass? Which are open, which
   
 
 //esialgne array
-var array = new Array(20);
+var array = new Array(100);
  
 
 
@@ -25,15 +25,15 @@ var array = new Array(20);
   //for loop has a iterator and i use the iterator to increase the indexed elemnt by 2
 
   //for(m = 0; m < 1;){
-  for(var m = 1; m < 5;){
+  for(var m = 1; m < 10;){
 
     var index = 0;
 
     for(let k = 0; k < array.length;){
       
-      if(array[index]==0){
+      if(array[k]==0){
 
-        array[index] = 1;
+        array[k] = 1;
 //kas siin pole ohtu, et ta hakkab valesid arve ümber muutma? noh kui index loogika ei eksi, siis see on okei.
 //probleem on, et K läheb nulli, ma pean säilitama selle väärtuse. vb siia väljaspoolt tuua üks muutuja?
 //kontroll on, et see peab progresseeruma 1-1-1, 2-4-6,3-6-9 jne...
@@ -45,16 +45,17 @@ var array = new Array(20);
 
       
 
-      index++;//index + m;
-      console.log("index",index);
+      k= k + m;
       
+      console.log("K=", k);
+      //console.log("array length",array.length);
 
     }
-    //console.log("M", m);
+    // console.log("M", m);
     m++
     var name = window. prompt("Enter your name: ");
     
-
+    
   }
   
 
